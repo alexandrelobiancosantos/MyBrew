@@ -1,0 +1,47 @@
+Mybrew/
+├── sensors_app/
+│   ├── static/
+│   ├── templates/
+│   ├── models.py
+│   ├── views.py
+│   ├── urls.py
+│   └── ...
+├── mybrew_pro/
+│   ├── settings.py
+│   ├── urls.py
+│   └── ...
+├── mybrew_venv/
+├── requirements.txt
+├── manage.py
+├── .gitignore
+└── README.md
+
+0. Criar pasta do projeto mybrew
+
+
+1. clonar repositorio da aws
+    git clone https://git-codecommit.us-east-1.amazonaws.com/v1/repos/Mybrew .   
+    inserir usuario e senha da AWS
+
+2. Ambiente virtual lab_app
+    python -m venv mybrew_venv
+    . \mybrew_venv\Scripts\activate
+
+3. Projeto Django mybrew
+    pip install django
+    python.exe -m pip install --upgrade pip
+    django-admin startproject mybrew_pro .
+
+4. Teste django
+    python manage.py runserver
+
+5. Criar app sensors
+    python manage.py startapp sensors_app
+
+6. Criar views de teste no app sensors_app
+    exemplo: 
+    def index(request):
+        return HttpResponse("Hello, world. You're at the dht11 index.")
+
+5. Editar urls do projeto para incluir urls do app
+6. Incluir funções 

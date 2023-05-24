@@ -1,0 +1,4 @@
+mybrew_venv/*
+aws/*
+.mypy_cache/*
+db.sqlite3
